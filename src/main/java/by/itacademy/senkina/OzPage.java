@@ -28,14 +28,14 @@ public class OzPage {
         driver.findElement(By.xpath(tabLinkEmail)).click();
     }
 
-    public void sendKeysInputTextEmail(String newemail) {
+    public void sendKeysInputTextEmail(String email) {
 
-        driver.findElement(By.xpath(inputTextEmail)).sendKeys(newemail);
+        driver.findElement(By.xpath(inputTextEmail)).sendKeys(email);
     }
 
-    public void sendKeysInputTextPassword(String newpassword) {
+    public void sendKeysInputTextPassword(String password) {
 
-        driver.findElement(By.xpath(inputTextPassword)).sendKeys(newpassword);
+        driver.findElement(By.xpath(inputTextPassword)).sendKeys(password);
     }
 
     public void clickInputButtonForm() {
