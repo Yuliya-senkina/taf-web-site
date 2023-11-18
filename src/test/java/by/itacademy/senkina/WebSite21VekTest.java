@@ -14,22 +14,17 @@ public class WebSite21VekTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.21vek.by/");
-        Vek21 vek21 = new Vek21();
-        WebElement buttonAccept = driver.findElement(By.xpath(vek21.buttonAccept));
-        buttonAccept.click();
-        WebElement buttonAccount = driver.findElement(By.xpath(vek21.buttonAccount));
-        buttonAccount.click();
-        WebElement buttonInput = driver.findElement(By.xpath(vek21.buttonInput));
-        buttonInput.click();
+        Vek21 vek21 = new Vek21(driver);
+        vek21.clickButtonAccept();
         Thread.sleep(1000);
-        WebElement ButtonInputLoginForm = driver.findElement(By.xpath(vek21.ButtonInputLoginForm));
-        ButtonInputLoginForm.click();
+        vek21.clickButtonAccount();
         Thread.sleep(1000);
-        WebElement errorMessageLogin = driver.findElement(By.xpath(vek21.textErrorLogin));
-        String actualLogin = errorMessageLogin.getText();
+        vek21.clickButtonInput();
+        vek21.clickButtonInputLoginForm();
+        Thread.sleep(1000);
+        String actualLogin = vek21.getTextErrorLogin();
         Assertions.assertEquals("Электронная почта не указана", actualLogin);
-        WebElement errorMessagePassword = driver.findElement(By.xpath(vek21.textErrorPassword));
-        String actualPassword = errorMessagePassword.getText();
+        String actualPassword = vek21.getTextErrorPassword();
         Assertions.assertEquals("Пароль не указан", actualPassword);
         driver.quit();
     }
@@ -39,7 +34,7 @@ public class WebSite21VekTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.21vek.by/");
-        Vek21 vek21 = new Vek21();
+        Vek21 vek21 = new Vek21(driver);
         WebElement buttonAccept = driver.findElement(By.xpath(vek21.buttonAccept));
         buttonAccept.click();
         WebElement buttonAccount = driver.findElement(By.xpath(vek21.buttonAccount));
@@ -65,7 +60,7 @@ public class WebSite21VekTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.21vek.by/");
-        Vek21 vek21 = new Vek21();
+        Vek21 vek21 = new Vek21(driver);
         WebElement buttonAccept = driver.findElement(By.xpath(vek21.buttonAccept));
         buttonAccept.click();
         WebElement buttonAccount = driver.findElement(By.xpath(vek21.buttonAccount));
@@ -91,7 +86,7 @@ public class WebSite21VekTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.21vek.by/");
-        Vek21 vek21 = new Vek21();
+        Vek21 vek21 = new Vek21(driver);
         WebElement buttonAccept = driver.findElement(By.xpath(vek21.buttonAccept));
         buttonAccept.click();
         WebElement buttonAccount = driver.findElement(By.xpath(vek21.buttonAccount));

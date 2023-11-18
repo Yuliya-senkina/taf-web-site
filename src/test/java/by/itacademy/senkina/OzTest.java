@@ -14,23 +14,16 @@ public class OzTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://oz.by/");
-        OzPage oz = new OzPage();
-        WebElement inputButtonMain = driver.findElement(By.xpath(oz.inputButtonMain));
-        inputButtonMain.click();
+        OzPage oz = new OzPage(driver);
+        oz.clickInputButtonMain();
         Thread.sleep(1000);
-        WebElement tabLinkEmail = driver.findElement(By.xpath(oz.tabLinkEmail));
-        tabLinkEmail.click();
+        oz.clickTabLinkEmail();
         Thread.sleep(1000);
-        WebElement inputTextEmail = driver.findElement(By.xpath(oz.inputTextEmail));
-        inputTextEmail.sendKeys("juliya@mail.ru");
-        WebElement inputTextPassword = driver.findElement(By.xpath(oz.inputTextPassword));
-        inputTextPassword.sendKeys("123");
-        WebElement inputButtonForm = driver.findElement(By.xpath(oz.inputButtonForm));
-        inputButtonForm.click();
+        oz.sendKeysInputTextEmail("juliya@mail.ru");
+        oz.sendKeysInputTextPassword("123");
+        oz.clickInputButtonForm();
         Thread.sleep(1000);
-        WebElement textError = driver.findElement(By.xpath(oz.textError));
-        String actualError = textError.getText();
-        Assertions.assertEquals("Адрес электронной почты не зарегистрирован. Зарегистрироваться", actualError);
+        Assertions.assertEquals("Адрес электронной почты не зарегистрирован. Зарегистрироваться",  oz.getTextError());
         driver.quit();
     }
 
@@ -39,7 +32,7 @@ public class OzTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://oz.by/");
-        OzPage oz = new OzPage();
+        OzPage oz = new OzPage(driver);
         WebElement inputButtonMain = driver.findElement(By.xpath(oz.inputButtonMain));
         inputButtonMain.click();
         Thread.sleep(1000);
