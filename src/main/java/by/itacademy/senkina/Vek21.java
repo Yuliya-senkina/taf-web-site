@@ -13,27 +13,33 @@ public class Vek21 {
     public String textErrorLogin = "//*[@id=\"default-:R2mm:-modal\"]/div/div/div[2]/div/div/form/div/div[1]/div[3]/span[2]";
     public String textErrorPassword = "//*[@id=\"default-:R2mm:-modal\"]/div/div/div[2]/div/div/form/div/div[2]/div[3]/span[2]";
     WebDriver driver;
-    public Vek21(WebDriver diver){
 
-        this.driver=driver;
+    public Vek21(WebDriver diver) {
+
+        this.driver = driver;
     }
-    public void clickButtonAccept(){
+
+    public void clickButtonAccept() {
         driver.findElement(By.xpath(buttonAccept)).click();
     }
-    public void clickButtonAccount(){
+
+    public void clickButtonAccount() {
         driver.findElement(By.xpath(buttonAccount)).click();
     }
-    public void clickButtonInput(){
+
+    public void clickButtonInput() {
         driver.findElement(By.xpath(buttonInput)).click();
     }
 
-    public void clickButtonInputLoginForm(){
+    public void clickButtonInputLoginForm() {
         driver.findElement(By.xpath(ButtonInputLoginForm)).click();
     }
-    public String getTextErrorLogin(){
+
+    public String getTextErrorLogin() {
         return driver.findElement(By.xpath(textErrorLogin)).getText();
     }
-    public String getTextErrorPassword(){
+
+    public String getTextErrorPassword() {
         return driver.findElement(By.xpath(textErrorPassword)).getText();
     }
 }

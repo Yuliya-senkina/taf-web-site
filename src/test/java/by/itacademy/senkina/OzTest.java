@@ -23,7 +23,7 @@ public class OzTest {
         oz.sendKeysInputTextPassword("123");
         oz.clickInputButtonForm();
         Thread.sleep(1000);
-        Assertions.assertEquals("Адрес электронной почты не зарегистрирован. Зарегистрироваться",  oz.getTextError());
+        Assertions.assertEquals("Адрес электронной почты не зарегистрирован. Зарегистрироваться", oz.getTextError());
         driver.quit();
     }
 
