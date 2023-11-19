@@ -13,7 +13,7 @@ public class OzPage {
     public String textEnter = "//*[@id=\"loginPopupIntro\"]";
     WebDriver driver;
 
-    public OzPage(WebDriver diver) {
+    public OzPage(WebDriver driver) {
 
         this.driver = driver;
     }

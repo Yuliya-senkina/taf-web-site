@@ -14,7 +14,7 @@ public class Vek21 {
     public String textErrorPassword = "//*[@id=\"default-:R2mm:-modal\"]/div/div/div[2]/div/div/form/div/div[2]/div[3]/span[2]";
     WebDriver driver;
 
-    public Vek21(WebDriver diver) {
+    public Vek21(WebDriver driver) {
 
         this.driver = driver;
     }
