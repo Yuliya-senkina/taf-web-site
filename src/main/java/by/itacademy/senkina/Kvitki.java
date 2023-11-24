@@ -12,6 +12,7 @@ public class Kvitki {
     public String inputButtonForm = "//*[@id=\"mat-tab-content-0-0\"]/div/app-user-login-form/app-collapsible/div/app-ui-button/button";
     public String textErrorEmail = "//*[@id=\"mat-tab-content-0-0\"]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[1]/app-email-input/app-field-error/app-collapsible";
     public String textErrorPassword = "//*[@id=\"mat-tab-content-0-0\"]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[2]/app-password-input/app-field-error/app-collapsible";
+    public String textErrorMain = "/html/body/div[9]/div[4]/div/mat-dialog-container/div/div/app-info-dialog-content/div[3]";
     WebDriver driver;
     public Kvitki(WebDriver driver) {
 
@@ -55,5 +56,10 @@ public class Kvitki {
     public String getTextErrorPassword() {
 
         return driver.findElement(By.xpath(textErrorPassword)).getText();
+    }
+
+    public String getTextErrorMain() {
+
+        return driver.findElement(By.xpath(textErrorMain)).getText();
     }
 }
