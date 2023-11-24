@@ -23,6 +23,7 @@ public class PassRw {
 
         driver.findElement(By.xpath(ButtonClose)).click();
     }
+
     public void clickInputButtonPersonalArea() {
 
         driver.findElement(By.xpath(inputButtonPersonalArea)).click();
@@ -32,10 +33,12 @@ public class PassRw {
 
         driver.findElement(By.xpath(inputTextEmail)).sendKeys(email);
     }
+
     public void sendKeysInputTextPassword(String email) {
 
         driver.findElement(By.xpath(inputTextPassword)).sendKeys(email);
     }
+
     public void clickInputButton() {
 
         driver.findElement(By.xpath(inputButton)).click();
