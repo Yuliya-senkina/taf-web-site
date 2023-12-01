@@ -24,6 +24,7 @@ public class TerraPage {
 
         driver.findElement(By.xpath(inputButtonClose)).click();
     }
+
     public void clickInputButtonPizza() {
 
         driver.findElement(By.xpath(inputButtonPizza)).click();

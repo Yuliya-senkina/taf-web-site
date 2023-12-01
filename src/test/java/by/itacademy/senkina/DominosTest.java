@@ -3,7 +3,7 @@ package by.itacademy.senkina;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class DominosTest extends BaseTest{
+public class DominosTest extends BaseTest {
 
     @Test
     public void testDominosTest() throws InterruptedException {

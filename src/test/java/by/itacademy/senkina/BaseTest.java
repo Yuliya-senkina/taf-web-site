@@ -7,14 +7,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
     WebDriver driver;
+
     @BeforeEach
-    public void start(){
+    public void start() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 
     }
+
     @AfterEach
-    public void finish(){
+    public void finish() {
 
         driver.quit();
     }
