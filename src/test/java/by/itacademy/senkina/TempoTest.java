@@ -16,6 +16,5 @@ public class TempoTest extends BaseTest {
         Thread.sleep(1000);
         tempoPage.clickInputButtonBasket();
         Assertions.assertEquals("Пицца \"Маргарита\" (21см)", tempoPage.getTextNamePizza());
-        finish();
     }
 }
