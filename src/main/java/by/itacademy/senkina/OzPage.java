@@ -4,13 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class OzPage {
-    public String inputButtonMain = "//*[@id=\"top-page\"]/header/div[1]/div/div[1]";
-    public String tabLinkEmail = "//*[@id=\"loginPopup\"]/div[1]/div[2]/ul/li[1]";
-    public String inputTextEmail = "//*[@id=\"loginForm\"]/div[2]/div[1]/div[1]/input";
-    public String inputTextPassword = "//*[@id=\"loginForm\"]/div[2]/div[1]/div[2]/input";
-    public String inputButtonForm = "//*[@id=\"loginForm\"]/button";
-    public String textError = "//*[@id=\"test\"]/div/div";
-    public String textEnter = "//*[@id=\"loginPopupIntro\"]";
+    public String inputButtonMain = "//div[@class=\"user-bar__item\"]";
+    public String tabLinkEmail = "//li[@class=\"i-nav-tabs__item\"]";
+    public String inputTextEmail = "//input[@tabindex=\"1\"]";
+    public String inputTextPassword = "//input[@tabindex=\"2\"]";
+    public String inputButtonForm = "//button[@role=\"button\"]";
+    public String textError = "//div[@class=\"i-popover__main\"]";
+    public String textEnter = "//p[@id=\"loginPopupIntro\"]";
     WebDriver driver;
 
     public OzPage(WebDriver driver) {

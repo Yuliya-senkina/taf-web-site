@@ -4,15 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Kvitki {
-    public String inputButtonAccept = "//*[@id=\"CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll\"]";
-    public String inputButtonClose = "/html/body/div[7]/div";
-    public String inputButton = "/html/body/div[3]/div[2]/div/app-user-account-link";
-    public String inputTextEmail = "/html/body/div[9]/div[2]/div/mat-dialog-container/div/div/app-user-auth-form/div[2]/mat-tab-group/div/mat-tab-body[1]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[1]/app-email-input/div/input";
-    public String inputTextPassword = "/html/body/div[9]/div[2]/div/mat-dialog-container/div/div/app-user-auth-form/div[2]/mat-tab-group/div/mat-tab-body[1]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[2]/app-password-input/div/input";
-    public String inputButtonForm = "//*[@id=\"mat-tab-content-0-0\"]/div/app-user-login-form/app-collapsible/div/app-ui-button/button";
-    public String textErrorEmail = "//*[@id=\"mat-tab-content-0-0\"]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[1]/app-email-input/app-field-error/app-collapsible";
-    public String textErrorPassword = "//*[@id=\"mat-tab-content-0-0\"]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[2]/app-password-input/app-field-error/app-collapsible";
-    public String textErrorMain = "/html/body/div[9]/div[4]/div/mat-dialog-container/div/div/app-info-dialog-content/div[3]";
+    public String inputButtonAccept = "//button[@id='CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll']";
+    public String inputButtonClose = "//div[@class=\"popupbanner_close\"]";
+    public String inputButton = "//app-user-account-link";
+    public String inputTextEmail = "//input[@type=\"email\"]";
+    public String inputTextPassword = "//input[@type=\"password\"]";
+    public String inputButtonForm = "//button[@class=\"ng-tns-c28-4\"]";
+    public String textErrorEmail = "//app-collapsible[@class=\"form-field-error ng-tns-c7-8 ng-tns-c6-9 ng-trigger ng-trigger-slideInOut ng-star-inserted\"]";
+    public String textErrorPassword = "//mat-tab-body[@id=\"mat-tab-content-0-0\"]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[2]/app-password-input/app-field-error/app-collapsible";
+    public String textErrorMain = "//div[@class=\"info-text\"]";
     WebDriver driver;
     public Kvitki(WebDriver driver) {
 
