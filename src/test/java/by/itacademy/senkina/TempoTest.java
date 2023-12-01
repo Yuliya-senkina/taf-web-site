@@ -3,7 +3,7 @@ package by.itacademy.senkina;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class TempoTest extends BaseTest{
+public class TempoTest extends BaseTest {
 
     @Test
     public void testTempoTest() throws InterruptedException {
