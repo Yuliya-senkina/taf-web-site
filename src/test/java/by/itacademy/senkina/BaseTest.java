@@ -12,12 +12,10 @@ public class BaseTest {
     public void start() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-
     }
 
     @AfterEach
     public void finish() {
-
         driver.quit();
     }
 }

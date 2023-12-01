@@ -9,6 +9,7 @@ public class CalculatePage {
     private final WebDriver driver;
 
     public CalculatePage(WebDriver driver) {
+
         this.driver = driver;
     }
 
