@@ -5,10 +5,10 @@ import org.openqa.selenium.WebDriver;
 
 public class CalculatePage {
 
-    private String buttonCalculate = "//input[@type='submit']";
-    private WebDriver driver;
+    private final String buttonCalculate = "//input[@type='submit']";
+    private final WebDriver driver;
 
-    public CalculatePage(WebDriver driver){
+    public CalculatePage(WebDriver driver) {
         this.driver = driver;
     }
 

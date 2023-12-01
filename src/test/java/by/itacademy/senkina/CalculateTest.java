@@ -4,12 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.sql.Driver;
-
 public class CalculateTest {
 
     @Test
-    public void testCalculateEmptyField(){
+    public void testCalculateEmptyField() {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://svyatoslav.biz/testlab/wt/index.php");

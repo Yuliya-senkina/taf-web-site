@@ -14,6 +14,7 @@ public class Kvitki {
     public String textErrorPassword = "//mat-tab-body[@id=\"mat-tab-content-0-0\"]/div/app-user-login-form/app-collapsible/div/app-form-builder/form/app-collapsible[2]/app-password-input/app-field-error/app-collapsible";
     public String textErrorMain = "//div[@class=\"info-text\"]";
     WebDriver driver;
+
     public Kvitki(WebDriver driver) {
 
         this.driver = driver;
@@ -28,6 +29,7 @@ public class Kvitki {
 
         driver.findElement(By.xpath(inputButtonAccept)).click();
     }
+
     public void clickInputButton() {
 
         driver.findElement(By.xpath(inputButton)).click();

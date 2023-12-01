@@ -64,6 +64,7 @@ public class KvitkiTest {
         Assertions.assertEquals("Пожалуйста, заполните поле (Пароль)", kvitki.getTextErrorPassword());
         driver.quit();
     }
+
     @Test
     public void testKvitkiIncorrectEmail() throws InterruptedException {
         WebDriver driver = new ChromeDriver();

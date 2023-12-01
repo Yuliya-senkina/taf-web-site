@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class PassRw {
-    public String ButtonClose = "//button[@class=\"close close--black\"]";
+    public String buttonClose = "//button[@class=\"close close--black\"]";
     public String inputButtonPersonalArea = "//li[@class=\"item_1 cabinet\"]";
     public String inputTextEmail = "//input[@name=\"login\"]";
     public String inputTextPassword = "//input[@type=\"password\"]";
@@ -21,7 +21,7 @@ public class PassRw {
 
     public void clickInputButtonClose() {
 
-        driver.findElement(By.xpath(ButtonClose)).click();
+        driver.findElement(By.xpath(buttonClose)).click();
     }
 
     public void clickInputButtonPersonalArea() {
