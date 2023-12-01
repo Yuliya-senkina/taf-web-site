@@ -20,6 +20,7 @@ public class WebSite21VekTest {
         vek21.clickButtonAccount();
         Thread.sleep(1000);
         vek21.clickButtonInput();
+        Thread.sleep(1000);
         vek21.clickButtonInputLoginForm();
         Thread.sleep(1000);
         String actualLogin = vek21.getTextErrorLogin();

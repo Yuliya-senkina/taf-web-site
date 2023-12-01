@@ -4,14 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class PassRw {
-    public String ButtonClose = "//*[@id=\"notification-popup\"]/div/div/div[1]/button";
-    public String inputButtonPersonalArea = "//*[@id=\"db\"]/div[1]/div[1]/div/header/div/div[3]/div[3]/ul/li[2]";
-    public String inputTextEmail = "//*[@id=\"form-auth\"]/fieldset/div[1]/label/div[2]/input";
-    public String inputTextPassword = "//*[@id=\"form-auth\"]/fieldset/div[2]/div[1]/div/label/div[2]/input";
-    public String inputButton = "//*[@id=\"form-auth\"]/fieldset/div[3]/input";
-    public String textErrorLogin = "//*[@id=\"login-error\"]";
-    public String textErrorPassword = "//*[@id=\"password-error\"]";
-    public String textErrorMain = "//*[@id=\"auth-popup\"]/div/div/div[2]/div[2]/div";
+    public String ButtonClose = "//button[@class=\"close close--black\"]";
+    public String inputButtonPersonalArea = "//li[@class=\"item_1 cabinet\"]";
+    public String inputTextEmail = "//input[@name=\"login\"]";
+    public String inputTextPassword = "//input[@type=\"password\"]";
+    public String inputButton = "//input[@class=\"btn btn-index btn_submit\"]";
+    public String textErrorLogin = "//label[@id=\"login-error\"]";
+    public String textErrorPassword = "//label[@id=\"password-error\"]";
+    public String textErrorMain = "//div[@class=\"danger standalone\"]";
     WebDriver driver;
 
     public PassRw(WebDriver driver) {
