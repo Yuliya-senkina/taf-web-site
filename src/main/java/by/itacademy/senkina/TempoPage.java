@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 public class TempoPage {
 
-    public String inputButtonPizza = "//img[@alt=\"Пицца\"]";
-    public String inputButtonOrder = "//div[@id=\"1\"]//div[@class=\"order-btn\"]";
-    public String inputButtonOrderPopup = "//div[@class=\"popupContent\"]//div[@class=\"order-btn\"]";
-    public String inputButtonBasket = "//div[@class=\"bs-price-col\"]";
-    public String textNamePizza =  "//div[@class=\"content\"]//div[(contains(text(), \"Маргарита\"))]";
+    public String inputButtonPizza = "//img[@alt='Пицца']";
+    public String inputButtonOrder = "//div[@id='1']//div[@class='order-btn']";
+    public String inputButtonOrderPopup = "//div[@class='popupContent']//div[@class='order-btn']";
+    public String inputButtonBasket = "//div[@class='bs-price-col']";
+    public String textNamePizza =  "//div[@class='content']//div[(contains(text(), 'Маргарита'))]";
     WebDriver driver;
 
     public TempoPage(WebDriver driver) {

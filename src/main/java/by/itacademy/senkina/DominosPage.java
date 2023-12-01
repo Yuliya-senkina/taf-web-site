@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 public class DominosPage {
 
-    public String inputButtonClose = "//button[@data-test-type=\"close\"]";
-    public String inputButtonPizza = "//a[@href=\"/pizza\"]";
-    public String inputButtonInBasket = "//div[@data-code=\"MGRC\"]//button[@data-action=\"a2b\"]";
-    public String inputButtonBasket = "//div[@class=\"cart-button\"]";
-    public String textNamePizza = "//div[@class=\"cart-button__mini-bag-products-wrapper\"]//div[@class=\"product-card__title\"]";
+    public String inputButtonClose = "//button[@data-test-type='close']";
+    public String inputButtonPizza = "//a[@href='/pizza']";
+    public String inputButtonInBasket = "//div[@data-code='MGRC']//button[@data-action='a2b']";
+    public String inputButtonBasket = "//div[@class='cart-button']";
+    public String textNamePizza = "//div[@class='cart-button__mini-bag-products-wrapper']//div[@class='product-card__title']";
 
     WebDriver driver;
 
