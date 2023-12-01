@@ -2,14 +2,11 @@ package by.itacademy.senkina;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class KvitkiTest {
+public class KvitkiTest extends BaseTest {
+
     @Test
     public void testKvitkiFieldsEmpty() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
         driver.get("https://www.kvitki.by/");
         Kvitki kvitki = new Kvitki(driver);
         kvitki.clickinputButtonAccept();
@@ -24,15 +21,15 @@ public class KvitkiTest {
         Thread.sleep(1000);
         Assertions.assertEquals("Пожалуйста, заполните поле (Эл. почта)", kvitki.getTextErrorLogin());
         Assertions.assertEquals("Пожалуйста, заполните поле (Пароль)", kvitki.getTextErrorPassword());
-        driver.quit();
+        finish();
     }
 
     @Test
     public void testKvitkiEmailPasswordClick() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.kvitki.by/");
+        start();
         Kvitki kvitki = new Kvitki(driver);
+        kvitki.clickinputButtonAccept();
+        Thread.sleep(1000);
         kvitki.clickinputButtonAccept();
         Thread.sleep(1000);
         kvitki.clickinputButtonClose();
@@ -43,14 +40,12 @@ public class KvitkiTest {
         kvitki.sendKeysInputTextPassword("");
         Thread.sleep(1000);
         Assertions.assertEquals("Пожалуйста, заполните поле (Эл. почта)", kvitki.getTextErrorLogin());
-        driver.quit();
+        finish();
     }
 
     @Test
     public void testKvitkiPasswordEmailClick() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.kvitki.by/");
+        start();
         Kvitki kvitki = new Kvitki(driver);
         kvitki.clickinputButtonAccept();
         Thread.sleep(1000);
@@ -62,14 +57,12 @@ public class KvitkiTest {
         kvitki.sendKeysInputTextEmail("");
         Thread.sleep(1000);
         Assertions.assertEquals("Пожалуйста, заполните поле (Пароль)", kvitki.getTextErrorPassword());
-        driver.quit();
+        finish();
     }
 
     @Test
     public void testKvitkiIncorrectEmail() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.kvitki.by/");
+        start();
         Kvitki kvitki = new Kvitki(driver);
         kvitki.clickinputButtonAccept();
         Thread.sleep(1000);
@@ -81,14 +74,12 @@ public class KvitkiTest {
         kvitki.sendKeysInputTextPassword("");
         Thread.sleep(1000);
         Assertions.assertEquals("Пожалуйста, введите адрес электронной почты в правильном формате: name@example.com", kvitki.getTextErrorLogin());
-        driver.quit();
+        finish();
     }
 
     @Test
     public void testKvitkiNotExistUser() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.kvitki.by/");
+        start();
         Kvitki kvitki = new Kvitki(driver);
         kvitki.clickinputButtonAccept();
         Thread.sleep(1000);
@@ -101,6 +92,6 @@ public class KvitkiTest {
         kvitki.clickInputButtonForm();
         Thread.sleep(2000);
         Assertions.assertEquals("Электронная почта или пароль недействительны. Система была обновлена, и в связи с этим мы перешли на вход по электронной почте.", kvitki.getTextErrorMain());
-        driver.quit();
+        finish();
     }
 }
